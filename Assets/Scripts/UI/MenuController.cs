@@ -33,12 +33,14 @@ public class MenuController : MonoBehaviour
     // Set a gameobject to be in focus
     private void SetFocusItem(Page page)
     {
-        GameObject focusItem = page.GetFirstFocusItem();   
-
-        // If page has specified focus item, set it as selected
-        if(focusItem != null)
+        if(page.GetLastFocusItem() != null)
         {
-            EventSystem.current.SetSelectedGameObject(focusItem);
+            EventSystem.current.SetSelectedGameObject(page.GetLastFocusItem());
+        }
+
+        else if(page.GetFirstFocusItem() != null)
+        {
+            EventSystem.current.SetSelectedGameObject(page.GetFirstFocusItem());
         }
         // If page doesn't have a specified focus item, set selected as null
         else
@@ -51,11 +53,11 @@ public class MenuController : MonoBehaviour
     #region Not Implemented Yet
     // Save currently selected item as last selected before pushing another page on top of the stack
     private void SaveLastItemInFocus()
-    {
-        Page page = pageStack.Peek();
+    {        
         // Check if the page on top of the stack exists
-        if(page != null)
+        if(pageStack.Count > 0)
         {
+            Page page = pageStack.Peek();
             page.SetLastFocusItem(EventSystem.current.currentSelectedGameObject);
         }        
     }
@@ -92,6 +94,7 @@ public class MenuController : MonoBehaviour
         page.Enter(true);
 
         // Save last focused item on previous page
+        SaveLastItemInFocus();
 
         // Define the focus item on the new page
         SetFocusItem(page);
