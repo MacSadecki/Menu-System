@@ -49,8 +49,6 @@ public class MenuController : MonoBehaviour
         }
     }
 
-
-    #region Not Implemented Yet
     // Save currently selected item as last selected before pushing another page on top of the stack
     private void SaveLastItemInFocus()
     {        
@@ -61,7 +59,6 @@ public class MenuController : MonoBehaviour
             page.SetLastFocusItem(EventSystem.current.currentSelectedGameObject);
         }        
     }
-    #endregion
 
     // Pop the page when player demands a cancel
     private void OnCancel()
