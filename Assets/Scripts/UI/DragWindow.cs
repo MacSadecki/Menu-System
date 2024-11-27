@@ -40,5 +40,7 @@ public class DragWindow : MonoBehaviour, IDragHandler, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         dragRectTransform.SetAsLastSibling();
+        // We set the object that we drag to as the previos to last sibling because the last sibling is the cursor
+        dragRectTransform.SetSiblingIndex(dragRectTransform.GetSiblingIndex() - 1);
     }
 }
