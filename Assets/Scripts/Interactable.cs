@@ -20,30 +20,25 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField]
     private UnityEvent interactionWestEvent;
 
-    bool currentSelected = false;
-
-    // This whole connection to the input system is messier than I would like it to be, but it works so for now I'm leaving it as it is
+    bool currentSelected = false;    
+    
     void Awake()
     {
         inputMap = playerInput.actions.FindActionMap("UI");        
     }
-    
+
+    // Connect the interaction method with an Action
     private void OnEnable() 
     {
-        inputMap.FindAction("InteractNorth").performed += InteractNorth;
-        inputMap.FindAction("InteractSouth").performed += InteractSouth;
-        inputMap.FindAction("InteractEast").performed += InteractEast;
-        inputMap.FindAction("InteractWest").performed += InteractWest;
+        inputMap.FindAction("Interact").performed += MakeInteraction;
     }
 
     private void OnDisable() 
     {
-        inputMap.FindAction("InteractNorth").performed -= InteractNorth;
-        inputMap.FindAction("InteractSouth").performed -= InteractSouth;
-        inputMap.FindAction("InteractEast").performed -= InteractEast;
-        inputMap.FindAction("InteractWest").performed -= InteractWest;
+        inputMap.FindAction("Interact").performed -= MakeInteraction;
     }
-    
+
+    // Check if the object is currently selected to make sure the interaction will be with the correct object
     public void OnPointerEnter(PointerEventData eventData)
     {
         currentSelected = true;
@@ -54,66 +49,40 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         currentSelected = false;
     }
 
-    // This whole part needs to be optimized and in best case scenario reduced to one singular method
-    private void InteractNorth(InputAction.CallbackContext context)
-    {   
-        // Run checks before invoking the event to make sure everything is in place     
+    private void MakeInteraction(InputAction.CallbackContext context)
+    {
+        // Run checks before invoking the event to make sure everything is in place    
         if (!currentSelected) return;
         if(!context.ReadValueAsButton()) return;
-        if (interactionNorthEvent.GetPersistentEventCount() < 1) 
-        {   
-            Debug.LogError("Missing listeners on the event that you're tying to invoke. Please add listeners in the inspector or disable this interaction.");
-            return;
-        }
         
-        
-        interactionNorthEvent?.Invoke();
-        Debug.Log("Interacted North");
+        // Determine which button is pressed to invoke the matching interaction
+        switch(context.control.name)
+        {
+            case "buttonNorth":
+                interactionNorthEvent?.Invoke();
+                Debug.Log("Interacted North");
+                break;
+
+            case "buttonEast":
+                interactionEastEvent?.Invoke();
+                Debug.Log("Interacted East");
+                break;
+
+            case "buttonSouth":
+                interactionSouthEvent?.Invoke();
+                Debug.Log("Interacted South");
+                break;
+
+            case "buttonWest":
+                interactionWestEvent?.Invoke();
+                Debug.Log("Interacted West");
+                break;
+
+            default:
+                Debug.LogError("Could not find a button to interact, see the InputActionMap and the corresponding script to check if everything is connected as it should be");
+                break;
+        } 
+
     }
-
-    private void InteractSouth(InputAction.CallbackContext context)
-    {        
-        if (!currentSelected) return;
-        if(!context.ReadValueAsButton()) return;
-        if (interactionSouthEvent.GetPersistentEventCount() < 1) 
-        {   
-            Debug.LogError("Missing listeners on the event that you're tying to invoke. Please add listeners in the inspector or disable this interaction.");
-            return;
-        }
-        
-       
-        interactionSouthEvent?.Invoke();
-        Debug.Log("Interacted South");
-    }
-
-    private void InteractEast(InputAction.CallbackContext context)
-    {        
-        if (!currentSelected) return;
-        if(!context.ReadValueAsButton()) return;
-        if (interactionEastEvent.GetPersistentEventCount() < 1) 
-        {   
-            Debug.LogError("Missing listeners on the event that you're tying to invoke. Please add listeners in the inspector or disable this interaction.");
-            return;
-        }
-
-        interactionEastEvent?.Invoke();
-        Debug.Log("Interacted East");
-    }
-
-    private void InteractWest(InputAction.CallbackContext context)
-    {        
-        if (!currentSelected) return;
-        if(!context.ReadValueAsButton()) return;
-        if (interactionWestEvent.GetPersistentEventCount() < 1) 
-        {   
-            Debug.LogError("Missing listeners on the event that you're tying to invoke. Please add listeners in the inspector or disable this interaction.");
-            return;
-        }
-
-        interactionWestEvent?.Invoke();
-        Debug.Log("Interacted West");
-    }
-
-
 
 }
