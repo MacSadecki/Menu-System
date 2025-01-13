@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 443435701381353670}
   - component: {fileID: 7584205072868966552}
   - component: {fileID: 376962954132309070}
+  - component: {fileID: 2125341483188182702}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -227,13 +228,62 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5994284001561435256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d624975fc04f5694d87c72ba21c4b03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dragRectTransform: {fileID: 443435701381353670}
   canvas: {fileID: 0}
+--- !u!114 &2125341483188182702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994284001561435256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b646edcce24a40b1f5726b2f30f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
+  pressNorthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  pressSouthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  pressEastEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 280835610166589896, guid: fb03cae35196c9c4bbf6a76a3a5c4bac, type: 3}
+        m_TargetAssemblyTypeName: InteractionClose, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5994284001561435256}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pressWestEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdNorthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdSouthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdEastEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdWestEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5996177771410784215
 GameObject:
   m_ObjectHideFlags: 0

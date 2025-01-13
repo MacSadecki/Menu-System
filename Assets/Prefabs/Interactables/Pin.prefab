@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
-  interactionNorthEvent:
+  pressNorthEvent:
     m_PersistentCalls:
       m_Calls: []
-  interactionSouthEvent:
+  pressSouthEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2376225279919783483, guid: dc347ef71c159164894338ccc150c5c8, type: 3}
@@ -100,7 +100,7 @@ MonoBehaviour:
         m_MethodName: SetInstantiatee
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 5994284001561435256, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -119,9 +119,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  interactionEastEvent:
+  pressEastEvent:
     m_PersistentCalls:
       m_Calls: []
-  interactionWestEvent:
+  pressWestEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116369403091022272, guid: 9fcbc7755c95f714f9cfe56a8ad68de3, type: 3}
+        m_TargetAssemblyTypeName: InteractionChangeColor, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8511822346147834470}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  holdNorthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdSouthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdEastEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdWestEvent:
     m_PersistentCalls:
       m_Calls: []

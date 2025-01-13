@@ -3,39 +3,75 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
     private PlayerInput playerInput;
     private InputActionMap inputMap;
+    private InputAction action;
 
-    [Header("Interactions")]
+    [Header("Press Interactions")]
     [SerializeField]
-    private UnityEvent interactionNorthEvent;
+    private UnityEvent pressNorthEvent;
     [SerializeField]
-    private UnityEvent interactionSouthEvent;
+    private UnityEvent pressSouthEvent;
     [SerializeField]
-    private UnityEvent interactionEastEvent;
+    private UnityEvent pressEastEvent;
     [SerializeField]
-    private UnityEvent interactionWestEvent;
+    private UnityEvent pressWestEvent;
+
+    [Header("Hold Interactions")]
+    [SerializeField]
+    private UnityEvent holdNorthEvent;
+    [SerializeField]
+    private UnityEvent holdSouthEvent;
+    [SerializeField]
+    private UnityEvent holdEastEvent;
+    [SerializeField]
+    private UnityEvent holdWestEvent;    
 
     bool currentSelected = false;    
     
     void Awake()
     {
-        inputMap = playerInput.actions.FindActionMap("UI");        
+        // Cache the ActionMap and Action references for ease of use
+        if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>();        
+        inputMap = playerInput.actions.FindActionMap("UI");
+        action = inputMap.FindAction("Interact");
     }
 
     // Connect the interaction method with an Action
     private void OnEnable() 
     {
-        inputMap.FindAction("Interact").performed += MakeInteraction;
+        //inputMap.FindAction("Interact").performed += MakeInteraction;
+        //action.Enable();
     }
 
     private void OnDisable() 
     {
-        inputMap.FindAction("Interact").performed -= MakeInteraction;
+       // inputMap.FindAction("Interact").performed -= MakeInteraction;
+       //action.Disable();
+    }
+
+    private void Start() 
+    {
+        // Check if action contains both interactions so the code below would not break
+        if (!(action.interactions.Contains("Hold") && action.interactions.Contains("Press"))) return;
+
+        action.performed += context => {
+            if(context.interaction is HoldInteraction) 
+            {
+                MakeHoldInteraction(context);
+                Debug.Log("Stared hold interaction");
+            }
+            else if(context.interaction is PressInteraction) 
+            {
+                MakePressInteraction(context);
+                Debug.Log("Stared press interaction"); 
+            }
+        };
     }
 
     // Check if the object is currently selected to make sure the interaction will be with the correct object
@@ -49,33 +85,68 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         currentSelected = false;
     }
 
-    private void MakeInteraction(InputAction.CallbackContext context)
+    private void MakePressInteraction(InputAction.CallbackContext context)
     {
         // Run checks before invoking the event to make sure everything is in place    
         if (!currentSelected) return;
-        if(!context.ReadValueAsButton()) return;
+        //if(!context.ReadValueAsButton()) return;         
         
         // Determine which button is pressed to invoke the matching interaction
         switch(context.control.name)
         {
             case "buttonNorth":
-                interactionNorthEvent?.Invoke();
-                Debug.Log("Interacted North");
+                pressNorthEvent?.Invoke();
+                Debug.Log("Interacted North Press");
                 break;
 
             case "buttonEast":
-                interactionEastEvent?.Invoke();
-                Debug.Log("Interacted East");
+                pressEastEvent?.Invoke();
+                Debug.Log("Interacted East Press");
                 break;
 
             case "buttonSouth":
-                interactionSouthEvent?.Invoke();
-                Debug.Log("Interacted South");
+                pressSouthEvent?.Invoke();
+                Debug.Log("Interacted South Press");
                 break;
 
             case "buttonWest":
-                interactionWestEvent?.Invoke();
-                Debug.Log("Interacted West");
+                pressWestEvent?.Invoke();
+                Debug.Log("Interacted West Press");
+                break;
+
+            default:
+                Debug.LogError("Could not find a button to interact, see the InputActionMap and the corresponding script to check if everything is connected as it should be");
+                break;
+        } 
+
+    }
+    private void MakeHoldInteraction(InputAction.CallbackContext context)
+    {
+        // Run checks before invoking the event to make sure everything is in place    
+        if (!currentSelected) return;
+        //if(!context.ReadValueAsButton()) return; 
+        
+        // Determine which button is pressed to invoke the matching interaction
+        switch(context.control.name)
+        {
+            case "buttonNorth":
+                holdNorthEvent?.Invoke();
+                Debug.Log("Interacted North Hold");
+                break;
+
+            case "buttonEast":
+                holdEastEvent?.Invoke();
+                Debug.Log("Interacted East Hold");
+                break;
+
+            case "buttonSouth":
+                holdSouthEvent?.Invoke();
+                Debug.Log("Interacted South Hold");
+                break;
+
+            case "buttonWest":
+                holdWestEvent?.Invoke();
+                Debug.Log("Interacted West Hold");
                 break;
 
             default:
