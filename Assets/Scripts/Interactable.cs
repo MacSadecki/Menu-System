@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -30,9 +29,9 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField]
     private UnityEvent holdEastEvent;
     [SerializeField]
-    private UnityEvent holdWestEvent;    
+    private UnityEvent holdWestEvent; 
 
-    bool currentSelected = false;    
+    bool currentSelected = false;      
     
     void Awake()
     {
@@ -41,20 +40,7 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         inputMap = playerInput.actions.FindActionMap("UI");
         action = inputMap.FindAction("Interact");
     }
-
-    // Connect the interaction method with an Action
-    private void OnEnable() 
-    {
-        //inputMap.FindAction("Interact").performed += MakeInteraction;
-        //action.Enable();
-    }
-
-    private void OnDisable() 
-    {
-       // inputMap.FindAction("Interact").performed -= MakeInteraction;
-       //action.Disable();
-    }
-
+    
     private void Start() 
     {
         // Check if action contains both interactions so the code below would not break
