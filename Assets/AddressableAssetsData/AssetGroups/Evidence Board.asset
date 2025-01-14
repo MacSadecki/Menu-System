@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Evidence Board
+  m_EditorClassIdentifier: 
+  m_GroupName: Evidence Board
+  m_GUID: 0b4b46fe82609564d81fc8d07c8fec8f
+  m_SerializeEntries:
+  - m_GUID: 7239d9f68c979da45bfdd5097c161434
+    m_Address: Assets/Prefabs/Prefab Variants/Evidence 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73c48116aecd657429e70bb44c90af2a
+    m_Address: Assets/Prefabs/Prefab Variants/Evidence 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c9bb1fb1cfd6834eba6936e55232392
+    m_Address: Assets/Prefabs/Prefab Variants/Evidence 4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df4c127ea017b924296f38e482c2176e
+    m_Address: Assets/Prefabs/Prefab Variants/Evidence 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e8a32e991be47aa4f911de245f31f819, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b88b857cba004094d8d7e57830710167, type: 2}
+    - {fileID: 11400000, guid: dc11e1588f936024a8c3ab19a40e8882, type: 2}

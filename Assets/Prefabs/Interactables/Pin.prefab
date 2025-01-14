@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6242980866972759200}
   - component: {fileID: 4753362774507147939}
   - component: {fileID: -9183667729856831353}
+  - component: {fileID: 7656165253777113352}
   m_Layer: 5
   m_Name: Pin
   m_TagString: Untagged
@@ -96,20 +97,8 @@ MonoBehaviour:
   pressSouthEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2376225279919783483, guid: dc347ef71c159164894338ccc150c5c8, type: 3}
-        m_TargetAssemblyTypeName: InteractionOpen, Assembly-CSharp
-        m_MethodName: SetInstantiatee
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5994284001561435256, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2376225279919783483, guid: dc347ef71c159164894338ccc150c5c8, type: 3}
-        m_TargetAssemblyTypeName: InteractionOpen, Assembly-CSharp
+      - m_Target: {fileID: 4866180040364931482, guid: 13ec42d8e8e68784f8342c8b54d6203f, type: 3}
+        m_TargetAssemblyTypeName: InteractionOpenAdressable, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
@@ -140,9 +129,12 @@ MonoBehaviour:
         m_CallState: 2
   holdNorthEvent:
     m_PersistentCalls:
+      m_Calls: []
+  holdSouthEvent:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1334921765254663049, guid: 42fce3a200965cb40affb954da9b6295, type: 3}
-        m_TargetAssemblyTypeName: InteractionDeleteLines, Assembly-CSharp
+      - m_Target: {fileID: 7061781917368612786, guid: f4a245727782c47458c60cfa3f0008c1, type: 3}
+        m_TargetAssemblyTypeName: InteractionCreateLine, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
@@ -153,17 +145,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  holdSouthEvent:
-    m_PersistentCalls:
-      m_Calls: []
   holdEastEvent:
     m_PersistentCalls:
       m_Calls: []
   holdWestEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7061781917368612786, guid: f4a245727782c47458c60cfa3f0008c1, type: 3}
-        m_TargetAssemblyTypeName: InteractionCreateLine, Assembly-CSharp
+      - m_Target: {fileID: 1334921765254663049, guid: 42fce3a200965cb40affb954da9b6295, type: 3}
+        m_TargetAssemblyTypeName: InteractionDeleteLines, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
@@ -187,3 +176,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedLineRenderers: []
+--- !u!114 &7656165253777113352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8511822346147834470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e38fd1c9355444fa92b8f496ca58e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAllowedToInstantiateAssets: 1
+  isAllowedToDestuctAssets: 0
+  evidenceWindowReference:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  instantiator: {fileID: 0}
