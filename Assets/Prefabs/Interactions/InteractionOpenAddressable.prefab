@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4057202173143847295}
   - component: {fileID: 4866180040364931482}
   m_Layer: 0
-  m_Name: InteractionOpenAdressable
+  m_Name: InteractionOpenAddressable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

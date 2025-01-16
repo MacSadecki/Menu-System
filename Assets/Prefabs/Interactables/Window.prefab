@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 7584205072868966552}
   - component: {fileID: 376962954132309070}
   - component: {fileID: 2125341483188182702}
+  - component: {fileID: 763854929540075920}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -470,8 +471,8 @@ MonoBehaviour:
   pressEastEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 280835610166589896, guid: fb03cae35196c9c4bbf6a76a3a5c4bac, type: 3}
-        m_TargetAssemblyTypeName: InteractionClose, Assembly-CSharp
+      - m_Target: {fileID: 8732546946710932105, guid: c1a4f603cf1474546a3ca6327b2dd148, type: 3}
+        m_TargetAssemblyTypeName: InteractionCloseAdressable, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 2
         m_Arguments:
@@ -497,6 +498,27 @@ MonoBehaviour:
   holdWestEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &763854929540075920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994284001561435256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e38fd1c9355444fa92b8f496ca58e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAllowedToInstantiateAssets: 0
+  isAllowedToDestuctAssets: 1
+  evidenceWindowReference:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  instantiator: {fileID: 0}
 --- !u!1 &5996177771410784215
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     
     void Awake()
     {
-        // Cache the ActionMap and Action references for ease of use
+        // Cache the ActionMap and Action references for later use
         if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>();        
         inputMap = playerInput.actions.FindActionMap("UI");
         action = inputMap.FindAction("Interact");
@@ -43,10 +44,12 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     
     private void Start() 
     {
-        // Check if action contains both interactions so the code below would not break
-        if (!(action.interactions.Contains("Hold") && action.interactions.Contains("Press"))) return;
+        // Return when the action does not contain both interaction types 
+        if (!(action.interactions.Contains("Hold") && action.interactions.Contains("Press"))) return;        
 
         action.performed += context => {
+            if (!currentSelected) return;
+
             if(context.interaction is HoldInteraction) 
             {
                 MakeHoldInteraction(context);
@@ -57,23 +60,23 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 MakePressInteraction(context);
                 Debug.Log("Stared press interaction"); 
             }
-        };
+        };        
     }
 
-    // Check if the object is currently selected to make sure the interaction will be with the correct object
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        currentSelected = true;
+    private void OnDisable()
+    {       
+        // Remove all listeners to avoid calling unexisting methods
+        RemoveListeners();
+
+        // Uncheck the current selection from this gameObject, just in case
+        currentSelected = false;   
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        currentSelected = false;
-    }
+    #region Interactions
 
     private void MakePressInteraction(InputAction.CallbackContext context)
     {
-        // Run checks before invoking the event to make sure everything is in place    
+        // Run checks before invoking the event to make sure everything is in place   
         if (!currentSelected) return;
         //if(!context.ReadValueAsButton()) return;         
         
@@ -106,10 +109,11 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         } 
 
     }
+
     private void MakeHoldInteraction(InputAction.CallbackContext context)
     {
-        // Run checks before invoking the event to make sure everything is in place    
-        if (!currentSelected) return;
+        // Run checks before invoking the event to make sure everything is in place         
+        if (!currentSelected) return;       
         //if(!context.ReadValueAsButton()) return; 
         
         // Determine which button is pressed to invoke the matching interaction
@@ -138,8 +142,39 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             default:
                 Debug.LogError("Could not find a button to interact, see the InputActionMap and the corresponding script to check if everything is connected as it should be");
                 break;
-        } 
+        }
 
     }
+
+    #endregion
+
+    #region Event Handling
+
+    // Check if the object is currently selected to make sure the interaction will be with the correct object
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        currentSelected = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        currentSelected = false;
+    }
+
+    // Removes all listeners from methods
+    private void RemoveListeners()
+    {
+        pressNorthEvent.RemoveAllListeners();
+        pressSouthEvent.RemoveAllListeners();
+        pressEastEvent.RemoveAllListeners();
+        pressWestEvent.RemoveAllListeners();
+
+        holdNorthEvent.RemoveAllListeners();
+        holdSouthEvent.RemoveAllListeners();
+        holdEastEvent.RemoveAllListeners();
+        holdWestEvent.RemoveAllListeners();
+    }
+
+    #endregion
 
 }
