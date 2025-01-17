@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class LineManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject cursor;    
-    [SerializeField]
-    private GameObject lineMaker;
+    [SerializeField] private GameObject cursor;    
+    [SerializeField] private GameObject lineMaker;
     private GameObject currentLineRendererGO;  
     private LineMaker currentLineMaker;  
     private bool isLineStarted = false;

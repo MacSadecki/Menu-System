@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionCloseAddressable : MonoBehaviour , IInteractable
 {
-    public string interactionButtonText = "Close";  
+    [SerializeField] private string interactionButtonText = "Close";  
     private AddressableController controller;
 
     public void Interact(GameObject gameObject)

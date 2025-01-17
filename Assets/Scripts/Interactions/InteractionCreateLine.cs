@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionCreateLine : MonoBehaviour, IInteractable
 {
-    public string interactionButtonText = "Create Line";   
+    [SerializeField] private string interactionButtonText = "Create Line";   
 
     // Prefab for the Line Maker 
    // public GameObject lineMaker;

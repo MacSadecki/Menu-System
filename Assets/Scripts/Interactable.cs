@@ -7,30 +7,21 @@ using UnityEngine.InputSystem.Interactions;
 
 public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField]
-    private PlayerInput playerInput;
+    [SerializeField] private PlayerInput playerInput;
     private InputActionMap inputMap;
     private InputAction action;
 
     [Header("Press Interactions")]
-    [SerializeField]
-    private UnityEvent pressNorthEvent;
-    [SerializeField]
-    private UnityEvent pressSouthEvent;
-    [SerializeField]
-    private UnityEvent pressEastEvent;
-    [SerializeField]
-    private UnityEvent pressWestEvent;
+    [SerializeField] private UnityEvent pressNorthEvent;
+    [SerializeField] private UnityEvent pressSouthEvent;
+    [SerializeField] private UnityEvent pressEastEvent;
+    [SerializeField] private UnityEvent pressWestEvent;
 
     [Header("Hold Interactions")]
-    [SerializeField]
-    private UnityEvent holdNorthEvent;
-    [SerializeField]
-    private UnityEvent holdSouthEvent;
-    [SerializeField]
-    private UnityEvent holdEastEvent;
-    [SerializeField]
-    private UnityEvent holdWestEvent; 
+    [SerializeField] private UnityEvent holdNorthEvent;
+    [SerializeField] private UnityEvent holdSouthEvent;
+    [SerializeField] private UnityEvent holdEastEvent;
+    [SerializeField] private UnityEvent holdWestEvent; 
 
     bool currentSelected = false;      
     

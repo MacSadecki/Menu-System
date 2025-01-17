@@ -3,10 +3,8 @@ using UnityEngine.EventSystems;
 
 public class DragWindow : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
-    [SerializeField]
-    private RectTransform dragRectTransform;
-    [SerializeField]
-    private Canvas canvas;
+    [SerializeField] private RectTransform dragRectTransform;
+    [SerializeField] private Canvas canvas;
 
     private void Awake() 
     {

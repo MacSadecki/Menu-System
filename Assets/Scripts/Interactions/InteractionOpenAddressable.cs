@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionOpenAddressable : MonoBehaviour, IInteractable
 {   
-    public string interactionButtonText = "Open";  
+    [SerializeField] private string interactionButtonText = "Open";  
     private AddressableController controller;
 
     public void Interact(GameObject gameObject)

@@ -10,34 +10,20 @@ public class Page : MonoBehaviour
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
-    [SerializeField]
-    private GameObject firstFocusItem;
+    [SerializeField] private GameObject firstFocusItem;
     private GameObject lastFocusItem = null;
-    [SerializeField]
-    private float animationSpeed = 1f;
+    [SerializeField] private float animationSpeed = 1f;
     public bool exitOnNewPagePush = false;
-    [SerializeField]
-    private AudioClip entryClip;
-    [SerializeField]
-    private AudioClip exitClip;
-    [SerializeField]
-    private EntryMode entryMode = EntryMode.Do_nothing;
-    [SerializeField]
-    private Direction entryDirection = Direction.None;
-    [SerializeField]
-    private EntryMode exitMode = EntryMode.Do_nothing;
-    [SerializeField]
-    private Direction exitDirection = Direction.None;
-    [SerializeField]
-    private UnityEvent prePushAction;
-    [SerializeField]
-    private UnityEvent postPushAction;
-    [SerializeField]
-    private UnityEvent prePopAction;
-    [SerializeField]
-    private UnityEvent postPopAction;
-
-    
+    [SerializeField] private AudioClip entryClip;
+    [SerializeField] private AudioClip exitClip;
+    [SerializeField] private EntryMode entryMode = EntryMode.Do_nothing;
+    [SerializeField] private Direction entryDirection = Direction.None;
+    [SerializeField] private EntryMode exitMode = EntryMode.Do_nothing;
+    [SerializeField] private Direction exitDirection = Direction.None;
+    [SerializeField] private UnityEvent prePushAction;
+    [SerializeField] private UnityEvent postPushAction;
+    [SerializeField] private UnityEvent prePopAction;
+    [SerializeField] private UnityEvent postPopAction;    
 
     private Coroutine animationCoroutine;
     private Coroutine audioCoroutine;

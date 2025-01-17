@@ -6,18 +6,12 @@ using UnityEngine.InputSystem.Users;
 
 public class GamepadCursor : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerInput playerInput;
-    [SerializeField]
-    private RectTransform cursorTransform;
-    [SerializeField]
-    private Canvas canvas;
-    [SerializeField]
-    private RectTransform canvasRectTransform;
-    [SerializeField]
-    private float cursorSpeed = 1000f;
-    [SerializeField]
-    private float padding = 50f;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private RectTransform cursorTransform;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private RectTransform canvasRectTransform;
+    [SerializeField] private float cursorSpeed = 1000f;
+    [SerializeField] private float padding = 50f;
 
     private bool previousMouseState;
     private Mouse virtualMouse;
@@ -72,8 +66,10 @@ public class GamepadCursor : MonoBehaviour
         // We check if virtual mouse or gamepad is present so the function would not run and potentialy break other stuff
         if(virtualMouse == null || Gamepad.current == null) return;
 
+        Debug.Log(playerInput.actions.FindActionMap("UI").FindAction("Navigate").ReadValue<Vector2>());
         // We make the cursor movement framerate independent
-        Vector2 deltaValue = Gamepad.current.leftStick.ReadValue();
+        Vector2 deltaValue = playerInput.actions.FindActionMap("UI").FindAction("Navigate").ReadValue<Vector2>();
+        //Vector2 deltaValue = Gamepad.current.leftStick.ReadValue(); // To take the value straight from the gamepad
         deltaValue *= cursorSpeed * Time.deltaTime;
 
         Vector2 currentPosition = virtualMouse.position.ReadValue();

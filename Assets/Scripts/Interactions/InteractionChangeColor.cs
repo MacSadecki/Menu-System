@@ -3,10 +3,9 @@ using UnityEngine.UI;
 
 public class InteractionChangeColor : MonoBehaviour, IInteractable
 {    
-    public string interactionButtonText = "Change color";
+    [SerializeField] private string interactionButtonText = "Change color";
 
-    [SerializeField]
-    private Color[] colors;
+    [SerializeField] private Color[] colors;
     private int currentColorIndex = 0;
 
     public void Interact(GameObject gameObject)

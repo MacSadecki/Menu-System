@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionDeleteLines : MonoBehaviour, IInteractable
 {
-    public string interactionButtonText = "Clear Lines";  
+    [SerializeField] private string interactionButtonText = "Clear Lines";  
     private LineController controller;
     public void Interact(GameObject gameObject)
     {

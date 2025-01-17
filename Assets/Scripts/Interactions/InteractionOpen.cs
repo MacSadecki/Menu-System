@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class InteractionOpen : MonoBehaviour, IInteractable
 {
-    public string interactionButtonText = "Open";
-    [SerializeField]
-    public GameObject instantiatee;    
+    [SerializeField] private string interactionButtonText = "Open";
+    [SerializeField] public GameObject instantiatee;    
     public void Interact(GameObject gameObject)
     {   
         Instantiate(instantiatee, gameObject.GetComponent<RectTransform>().position, Quaternion.identity, gameObject.GetComponentInParent<Canvas>().transform);        

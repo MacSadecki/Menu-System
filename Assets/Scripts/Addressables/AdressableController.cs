@@ -3,15 +3,10 @@ using UnityEngine.AddressableAssets;
 
 public class AddressableController : MonoBehaviour
 {
-    [SerializeField]
-    private bool isAllowedToInstantiateAssets = false;
-    [SerializeField]
-    private bool isAllowedToDestuctAssets = false;
-    [SerializeField]
-    private AssetReferenceGameObject evidenceWindowReference;
-    [SerializeField]
-    private AddressableInstantiator instantiator;
-
+    [SerializeField] private bool isAllowedToInstantiateAssets = false;
+    [SerializeField] private bool isAllowedToDestuctAssets = false;
+    [SerializeField] private AssetReferenceGameObject evidenceWindowReference;
+    [SerializeField] private AddressableInstantiator instantiator;
     
     private void Awake() 
     {        
