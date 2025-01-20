@@ -92,6 +92,42 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ad2eccf9a11eb540b4781cfc61db8d6, type: 3}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 910482722816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:441e70316484d664b8988b950addc57b
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4126724452320677757}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463465311969412534, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3502672982528921852, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
       propertyPath: m_text
       value: Found at the crime scene. Is of unknown origin. Maybe there's another
@@ -105,6 +141,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 938827829248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:441e70316484d664b8988b950addc57b
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9004514187153320057}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137701634376657058, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8442166218856445944, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
       propertyPath: m_text
       value: Evidence - Skull
@@ -114,3 +186,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+--- !u!114 &4126724452320677757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8442166218856445944, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+  m_PrefabInstance: {fileID: 5507211253900359813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9004514187153320057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3502672982528921852, guid: 0a50d7f7e5edf084b8e268e9c64cfda3, type: 3}
+  m_PrefabInstance: {fileID: 5507211253900359813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

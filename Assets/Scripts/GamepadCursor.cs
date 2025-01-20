@@ -26,14 +26,14 @@ public class GamepadCursor : MonoBehaviour
     {
         mainCamera = Camera.main;
         currentMouse = Mouse.current;
-
+        
         // We check if vistual mouse is present
         if(virtualMouse == null)
-        {
+        {                
             virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
         }
         else if(!virtualMouse.added)
-        {
+        {            
             InputSystem.AddDevice(virtualMouse);
         }
 
@@ -48,7 +48,7 @@ public class GamepadCursor : MonoBehaviour
         }
 
         InputSystem.onAfterUpdate += UpdateMotion;
-        playerInput.onControlsChanged += OnControlsChanged;
+        playerInput.onControlsChanged += OnControlsChanged;        
     }
 
 
@@ -65,8 +65,7 @@ public class GamepadCursor : MonoBehaviour
     {
         // We check if virtual mouse or gamepad is present so the function would not run and potentialy break other stuff
         if(virtualMouse == null || Gamepad.current == null) return;
-
-        Debug.Log(playerInput.actions.FindActionMap("UI").FindAction("Navigate").ReadValue<Vector2>());
+        
         // We make the cursor movement framerate independent
         Vector2 deltaValue = playerInput.actions.FindActionMap("UI").FindAction("Navigate").ReadValue<Vector2>();
         //Vector2 deltaValue = Gamepad.current.leftStick.ReadValue(); // To take the value straight from the gamepad

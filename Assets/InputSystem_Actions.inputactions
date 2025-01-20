@@ -576,7 +576,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold,Press(behavior=1)",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "InteractNorth",

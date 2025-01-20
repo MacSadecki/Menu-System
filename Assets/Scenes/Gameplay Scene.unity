@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8030212869952358731, guid: 9fa32542ea1d9ac458d981f4b841a22f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8103944796075996544, guid: 9fa32542ea1d9ac458d981f4b841a22f, type: 3}
       propertyPath: m_IsActive
       value: 1

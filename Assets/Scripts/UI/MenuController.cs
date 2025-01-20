@@ -2,20 +2,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Canvas))]
+//[RequireComponent(typeof(Canvas))]
 [DisallowMultipleComponent]
 public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private Page initialPage;   
 
-    private Canvas rootCanvas;
+    [SerializeField] private Canvas rootCanvas;
 
     private Stack<Page> pageStack = new Stack<Page>();
 
     private void Awake() 
     {
-        rootCanvas = GetComponent<Canvas>();
+        //rootCanvas = GetComponent<Canvas>();
     }
 
     private void Start()

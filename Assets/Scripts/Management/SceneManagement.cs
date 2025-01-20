@@ -18,7 +18,7 @@ public class SceneManagement : MonoBehaviour
     }
 
     public void EndLevelSequence()
-    {
+    {        
         sequencerEndLevel.InitializeSequene();
     }
 

@@ -23,23 +23,23 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private UnityEvent holdEastEvent;
     [SerializeField] private UnityEvent holdWestEvent; 
 
-    bool currentSelected = false;      
+    bool currentSelected = false; 
     
     void Awake()
     {
         // Cache the ActionMap and Action references for later use
         if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>();        
         inputMap = playerInput.actions.FindActionMap("UI");
-        action = inputMap.FindAction("Interact");
+        action = inputMap.FindAction("Interact");               
     }
-    
+
     private void Start() 
     {
         // Return when the action does not contain both interaction types 
         if (!(action.interactions.Contains("Hold") && action.interactions.Contains("Press"))) return;        
-
-        action.performed += context => {
-            if (!currentSelected) return;
+        
+        action.performed += context => {            
+            if (!currentSelected) return;            
 
             if(context.interaction is HoldInteraction) 
             {
@@ -53,6 +53,9 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             }
         };        
     }
+
+    // Enable the action when Interaction is enabled
+    private void OnEnable() => action.Enable();
 
     private void OnDisable()
     {       
