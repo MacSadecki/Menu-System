@@ -29,7 +29,7 @@ public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         // Cache the ActionMap and Action references for later use
         if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>();        
-        inputMap = playerInput.actions.FindActionMap("UI");
+        inputMap = playerInput.actions.FindActionMap("Gameplay");
         action = inputMap.FindAction("Interact");               
     }
 

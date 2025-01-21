@@ -23,7 +23,7 @@ public class Settings : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   // Cache references
-        navigateUi = playerInput.actions.FindActionMap("UI").FindAction("Navigate");
+        navigateUi = playerInput.actions.FindActionMap("Gameplay").FindAction("Navigate");
 
         // Check for playerprefs settings
         CheckPlayerPrefs();

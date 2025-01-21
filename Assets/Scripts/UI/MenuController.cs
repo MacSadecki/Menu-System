@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 //[RequireComponent(typeof(Canvas))]
 [DisallowMultipleComponent]
@@ -10,12 +13,28 @@ public class MenuController : MonoBehaviour
     private Page initialPage;   
 
     [SerializeField] private Canvas rootCanvas;
+    // Testing 
+    [SerializeField] private PlayerInput playerInput;
+    private InputAction action;
 
     private Stack<Page> pageStack = new Stack<Page>();
 
     private void Awake() 
     {
-        //rootCanvas = GetComponent<Canvas>();
+        //rootCanvas = GetComponent<Canvas>();        
+        action = playerInput.actions.FindActionMap("Menus").FindAction("Cancel"); 
+
+        action.performed += context => OnCancel();        
+    }
+
+    private void OnDisable() 
+    {
+        action.performed -= context => OnCancel();        
+    }
+
+    private void Update() 
+    {
+        Debug.Log(playerInput.currentActionMap);
     }
 
     private void Start()
@@ -147,4 +166,6 @@ public class MenuController : MonoBehaviour
             PopPage();
         }
     }
+
+    
 }

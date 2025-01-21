@@ -8,7 +8,7 @@ public class LoadUserSettings : MonoBehaviour
     InputAction navigateUi;
     private void Awake() 
     {
-        navigateUi = playerInput.actions.FindActionMap("UI").FindAction("Navigate");
+        navigateUi = playerInput.actions.FindActionMap("Gameplay").FindAction("Navigate");
 
         LoadControllerSettings();
     }

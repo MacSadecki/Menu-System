@@ -67,7 +67,7 @@ public class GamepadCursor : MonoBehaviour
         if(virtualMouse == null || Gamepad.current == null) return;
         
         // We make the cursor movement framerate independent
-        Vector2 deltaValue = playerInput.actions.FindActionMap("UI").FindAction("Navigate").ReadValue<Vector2>();
+        Vector2 deltaValue = playerInput.actions.FindActionMap("Gameplay").FindAction("Navigate").ReadValue<Vector2>();
         //Vector2 deltaValue = Gamepad.current.leftStick.ReadValue(); // To take the value straight from the gamepad
         deltaValue *= cursorSpeed * Time.deltaTime;
 
