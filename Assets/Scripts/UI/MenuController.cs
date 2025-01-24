@@ -106,6 +106,7 @@ public class MenuController : MonoBehaviour
     // Push the page on top of the stack
     public void PushPage(Page page)
     {
+        Debug.Log("Pushing page: " + page.name);
         // Play animations and audio
         page.Enter(true);
 
