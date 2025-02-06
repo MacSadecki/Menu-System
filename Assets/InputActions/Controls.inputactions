@@ -1429,7 +1429,7 @@
                     "type": "PassThrough",
                     "id": "dbd29dc6-d16d-4729-a942-fe84e0361e95",
                     "expectedControlType": "Vector2",
-                    "processors": "StickDeadzone(min=0.125,max=0.925)",
+                    "processors": "StickDeadzone(min=0.125,max=0.925),InvertVector2(invertX=false,invertY=false)",
                     "interactions": "",
                     "initialStateCheck": true
                 },

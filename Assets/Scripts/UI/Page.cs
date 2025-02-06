@@ -152,6 +152,10 @@ public class Page : MonoBehaviour
 
     private void PlayEntryClip(bool playAudio)
     {
+        SoundFXManager.instance.PlaySoundFXClip(entryClip, transform, 1f);
+        return;
+        // Old system - to be removed
+        /*
         if(playAudio && entryClip != null && audioSource != null)
         {
             if(audioCoroutine != null)
@@ -161,10 +165,15 @@ public class Page : MonoBehaviour
         }
 
         audioCoroutine = StartCoroutine(PlayClip(entryClip));
+        */
     }
 
     private void PlayExitClip(bool playAudio)
     {
+        SoundFXManager.instance.PlaySoundFXClip(exitClip, transform, 1f);
+        return;
+        // Old system for playing exit clips - currently not in use 
+        /*
         if(playAudio && exitClip != null && audioSource != null)
         {
             if(audioCoroutine != null)
@@ -174,11 +183,12 @@ public class Page : MonoBehaviour
         }
 
         audioCoroutine = StartCoroutine(PlayClip(exitClip));
+        */
     }
 
     #endregion Audio
 
-    // Pass the audio clip to play it
+    // Pass the audio clip to play it - currently not in use
     private IEnumerator PlayClip(AudioClip clip)
     {
         audioSource.enabled = true;
