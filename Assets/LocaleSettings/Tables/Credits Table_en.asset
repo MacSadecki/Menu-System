@@ -22,6 +22,17 @@ MonoBehaviour:
     m_Localized: CREDITS
     m_Metadata:
       m_Items: []
+  - m_Id: 7661751461990400
+    m_Localized: 'Made by:
+
+      Maciej "Kirkus" Sadecki
+
+
+      Special thanks:
+
+      Cainie'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

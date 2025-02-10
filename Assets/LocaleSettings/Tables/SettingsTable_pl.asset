@@ -38,6 +38,30 @@ MonoBehaviour:
     m_Localized: OPCJE
     m_Metadata:
       m_Items: []
+  - m_Id: 7659753182318592
+    m_Localized: Wibracje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659815987826688
+    m_Localized: "Odwr\xF3\u0107 o\u015B X"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659883943940096
+    m_Localized: "Odwr\xF3\u0107 o\u015B Y"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659951631618048
+    m_Localized: "Og\xF3lna g\u0142o\u015Bno\u015B\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660025174544384
+    m_Localized: "Efekty dzwi\u0119kowe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660092354711552
+    m_Localized: Muzyka
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

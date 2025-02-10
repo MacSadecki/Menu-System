@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: creditsTitle
     m_Metadata:
       m_Items: []
+  - m_Id: 7661751461990400
+    m_Key: creditsContent
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

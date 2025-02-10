@@ -35,6 +35,30 @@ MonoBehaviour:
     m_Key: settingsTitle
     m_Metadata:
       m_Items: []
+  - m_Id: 7659753182318592
+    m_Key: vibration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659815987826688
+    m_Key: invertXAxis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659883943940096
+    m_Key: invertYAxis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659951631618048
+    m_Key: soundMaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660025174544384
+    m_Key: soundSoundFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660092354711552
+    m_Key: soundMusic
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

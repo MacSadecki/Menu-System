@@ -38,6 +38,30 @@ MonoBehaviour:
     m_Localized: SETTINGS
     m_Metadata:
       m_Items: []
+  - m_Id: 7659753182318592
+    m_Localized: Vibration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659815987826688
+    m_Localized: Invert X axis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659883943940096
+    m_Localized: Invert Y axis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7659951631618048
+    m_Localized: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660025174544384
+    m_Localized: Sounds FX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7660092354711552
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

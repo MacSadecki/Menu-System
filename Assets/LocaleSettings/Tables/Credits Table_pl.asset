@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: "TW\xD3RCY"
     m_Metadata:
       m_Items: []
+  - m_Id: 7661751461990400
+    m_Localized: "Stworzone przez:\nMaciej \"Kirkus\" Sadecki\n\nSpecjalne podzi\u0119kowania:\nCainie"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
