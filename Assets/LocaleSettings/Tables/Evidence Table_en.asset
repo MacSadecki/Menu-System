@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Evidence Table_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 441e70316484d664b8988b950addc57b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5658103808
+    m_Localized: Evidence - Envelope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717376966656
+    m_Localized: An envelope found at the crime scene. Contains a letter with threats
+      adressed to the victim.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 840949551104
+    m_Localized: Evidence - Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874571091968
+    m_Localized: Found stuck in the victims body. Looks like a standard kitchen knife
+      but substantially bigger.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 910482722816
+    m_Localized: Evidence - Skull
+    m_Metadata:
+      m_Items: []
+  - m_Id: 938827829248
+    m_Localized: Found at the crime scene. Is of unknown origin. Maybe there's another
+      victim?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965302276096
+    m_Localized: Evidence - Newspaper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990279356416
+    m_Localized: 'A newspaper with yesterday''s date on it. The murder must have
+      happened yesterday or today. '
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

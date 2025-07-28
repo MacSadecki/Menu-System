@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Evidence Table Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Evidence Table
+  m_TableCollectionNameGuidString: 441e70316484d664b8988b950addc57b
+  m_Entries:
+  - m_Id: 5658103808
+    m_Key: evidenceOneTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717376966656
+    m_Key: evidenceOneDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 840949551104
+    m_Key: evidenceTwoTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874571091968
+    m_Key: evidenceTwoDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 910482722816
+    m_Key: evidenceThreeTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 938827829248
+    m_Key: evidenceThreeDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965302276096
+    m_Key: evidenceFourTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990279356416
+    m_Key: evidenceFourDescription
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8011045480072741102
+  references:
+    version: 2
+    RefIds:
+    - rid: 8011045480072741102
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1737367775874
